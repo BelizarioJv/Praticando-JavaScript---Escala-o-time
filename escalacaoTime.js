@@ -57,3 +57,15 @@ function addPlayer(){
     ul.appendChild(buttonConfirm);
     escalacao.appendChild(ul)
 }
+function removePlayer(){
+    const removedPlayer = parseInt(prompt("Qual o numero da camisa do jogador que deseja retirar da escalação?"));
+    for(let i = 0 ; i < escalacaolist.length;i++){
+        if(escalacaolist[i][1]==removedPlayer){
+            escalacaolist.splice(escalacaolist[i],1)
+            alert("Jogador retirado com sucesso")
+        }else{
+            alert("Numero da camisa invalido")
+        }
+    }
+}
+
